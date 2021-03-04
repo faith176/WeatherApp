@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+  <!-- styles -->
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:wght@500&display=swap" rel="stylesheet">
+   
+</head>
+  <body>
+    <main>
+        <section class="top" id="top">
+            <div class="container">
+              <h1 class="heading">Weather App</h1>
+              <!-- creates a form for input to get city from user -->
+                <div id="form-div">
+                <input id="city" type="text" placeholder="Search for any city!" autofocus>
+                <button id="submit" type="submit">SUBMIT</button>
+                </div>
+            </div>
+          </section>
+          <section id="weather">
+            <div class="weather-container">
+              <div class="icon">
+                <img id="img" scr="" alt="placeholder">
+              </div>
+              <div class="temperature">
+                <span id="temp-value"></span>
+              </div>
+              <div class=description-container>
+                <span id="description"></span>
+              </div>
+            </div>
+          </section>
+    </main>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
