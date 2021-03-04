@@ -8,9 +8,10 @@ const search = document.querySelector("#top");
 const weatherDisplay = document.querySelector("#weather");
 
 //get weather display elements
-const icon = document.querySelector("#img");
+const icon = document.querySelector("#img-icon");
 const tempVal = document.querySelector("#temp-value");
 const des = document.querySelector("#description");
+const loc = document.querySelector("#location");
 
 
 //keeps track of important data values
@@ -78,10 +79,9 @@ function reset() {
 
 function displayWeather() {
   hide();
-  icon.scr = weather.iconId +".png";
+  // icon.scr = "icons/clouds-50.png";
   tempVal.innerHTML = weather.temperature+ "°C";
   des.innerHTML = weather.description;
-  // locationElement.innerHTML = `${weather.city}, ${weather.country}`;
-
+  loc.innerHTML = weather.city +", " + weather.country;
 }
 
