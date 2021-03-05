@@ -13,6 +13,8 @@ const tempVal = document.querySelector("#temp-value");
 const des = document.querySelector("#description");
 const loc = document.querySelector("#location");
 
+//get back button from weather section
+const back = document.querySelector('#back');
 
 //keeps track of important data values
 const weather = {};
@@ -31,6 +33,12 @@ window.addEventListener('load', (event) => {
 submit.addEventListener('click', function () {
   let cityValue = input.value;
   findWeather(cityValue);
+});
+
+//adds an event listener for when the back button is clicked and resets values
+back.addEventListener('click', function () {
+  reset();
+  show();
 });
 
 

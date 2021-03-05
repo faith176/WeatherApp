@@ -9,7 +9,7 @@ body{
 
 /*
 ===============
-Main Page
+Search Page
 ===============
 */
 .top{
@@ -37,7 +37,7 @@ Main Page
     cursor: text;
 }
 
-#submit{
+.submit{
     width:15%;
     height:120%;
     font-family: 'Work Sans', sans-serif;
@@ -45,10 +45,11 @@ Main Page
     transition: all 0.5s;
     border-radius: 10px;
     border: 0;
+    background-color:white;
     
 }
 
-#submit:hover{
+.submit:hover{
     background: #2b2bff;
     transition: all 0.5s;
     border-radius: 10px;
@@ -62,7 +63,6 @@ Weather Details
 */
 
 #weather{
-    
     width:300px;
     height:400px;
 }
@@ -77,6 +77,12 @@ Weather Details
     height:400px;
 }
 
+
+#back{
+    height: 50px;
+    width:300px;
+    margin-top: 20px;
+}
 
 
 
