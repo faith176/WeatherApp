@@ -81,7 +81,11 @@ function reset() {
 function displayWeather() {
   hide();
   loc.innerHTML = weather.city +", " + weather.country;
-  icon.src = "icons/clouds-50.png";
+
+
+  
+  //gets the icons from the website
+  icon.src = `http://openweathermap.org/img/wn/${weather.iconId}.png`;
   tempVal.innerHTML = weather.temperature+ "°C";
   des.innerHTML = weather.description;
 }
