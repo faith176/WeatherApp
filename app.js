@@ -21,10 +21,15 @@ const Kelvin = 273;
 //store api key
 const apiKey = "242e7e5620f9b0e2bad6976201a676b3";
 
+//when page loads, removed the weather section and only shows the search section
+window.addEventListener('load', (event) => {
+  show();
+});
+
+
 //adds an event listener for when the submit button is clicked
 submit.addEventListener('click', function () {
   let cityValue = input.value;
-  console.log(cityValue);
   findWeather(cityValue);
 });
 
@@ -54,7 +59,7 @@ function findWeather(location) {
   });
 }
 
-//hides the search bar
+//hides the search bar and shows the weather section
 function hide() {
   search.style.display = "none";
   console.log("hiding search bar");
@@ -63,7 +68,7 @@ function hide() {
   console.log("showing weather display");
 }
 
-//shows the search bar
+//shows the search bar and hides the weather section
 function show() {
   weatherDisplay.style.display = "none";
   console.log("hiding weather display ");
