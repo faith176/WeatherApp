@@ -29,12 +29,12 @@ submit.addEventListener('click', function () {
 
 
 //Can see the example data from here 
-//http://api.openweathermap.org/data/2.5/weather?q=calgary&appid=242e7e5620f9b0e2bad6976201a676b3
+//https://api.openweathermap.org/data/2.5/weather?q=calgary&appid=242e7e5620f9b0e2bad6976201a676b3
 
 
 function findWeather(location) {
   //constructs api url
-  const api = ("http://api.openweathermap.org/data/2.5/weather?q=" +location +"&appid="+apiKey);
+  const api = ("https://api.openweathermap.org/data/2.5/weather?q=" +location +"&appid="+apiKey);
   fetch(api)
   .then(function(response){
       let data = response.json();
