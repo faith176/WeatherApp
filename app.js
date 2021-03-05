@@ -16,6 +16,7 @@ const loc = document.querySelector("#location");
 
 //keeps track of important data values
 const weather = {};
+const Kelvin = 273;
 
 //store api key
 const apiKey = "242e7e5620f9b0e2bad6976201a676b3";
@@ -34,7 +35,7 @@ submit.addEventListener('click', function () {
 
 function findWeather(location) {
   //constructs api url
-  const api = ("https://api.openweathermap.org/data/2.5/weather?q=" +location +"&appid="+apiKey);
+  const api = ("https://api.openweathermap.org/data/2.5/weather?q="+location+"&appid="+apiKey);
   fetch(api)
   .then(function(response){
       let data = response.json();
@@ -42,7 +43,7 @@ function findWeather(location) {
   })
   .then(function(data){
     //retrives all the relevant data
-    weather.temperature = Math.floor(data.main.temp - 273);
+    weather.temperature = Math.floor(data.main.temp - Kelvin);
     weather.description = data.weather[0].description;
     weather.iconId = data.weather[0].icon;
     weather.city = data.name;
@@ -79,9 +80,17 @@ function reset() {
 
 function displayWeather() {
   hide();
-  // icon.scr = "icons/clouds-50.png";
+  loc.innerHTML = weather.city +", " + weather.country;
+  icon.src = "icons/clouds-50.png";
   tempVal.innerHTML = weather.temperature+ "°C";
   des.innerHTML = weather.description;
-  loc.innerHTML = weather.city +", " + weather.country;
+}
+
+function pickIcon() {
+
+}
+
+function pickBackground() {
+
 }
 
