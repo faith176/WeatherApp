@@ -12,6 +12,7 @@ const icon = document.querySelector("#img-icon");
 const tempVal = document.querySelector("#temp-value");
 const des = document.querySelector("#description");
 const loc = document.querySelector("#location");
+const details = document.querySelector("#details");
 
 //get back button from weather section
 const back = document.querySelector('#back');
@@ -25,6 +26,7 @@ const apiKey = "242e7e5620f9b0e2bad6976201a676b3";
 
 //when page loads, removed the weather section and only shows the search section
 window.addEventListener('load', (event) => {
+  document.querySelector("#header-icon").src = "rain-cloud-50.png";
   show();
 });
 
