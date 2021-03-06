@@ -7,7 +7,6 @@ body{
     height:500px;
 }
 
-
 /*
 ===============
 Search Page
@@ -17,7 +16,7 @@ Search Page
     display:flex;
     justify-content:center;
     font-size:40px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Roboto", sans-serif;
     color:white;
 }
 
@@ -34,14 +33,14 @@ Search Page
     width:70%;
     height:100%;
     font-size:20px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Roboto", sans-serif;
     cursor: text;
 }
 
 .submit{
     width:15%;
     height:120%;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Roboto", sans-serif;
     cursor: pointer;
     transition: all 0.5s;
     border-radius: 10px;
@@ -76,16 +75,14 @@ Weather Details
     align-items:center;
     flex-direction: column;
     height:400px;
+    font-family: "Roboto", sans-serif;
 }
-
 
 #back{
     height: 50px;
     width:300px;
     margin-top: 20px;
 }
-
-
 
 /*
 ===============
@@ -99,6 +96,7 @@ Details box
     height: auto;
     flex-direction: column;
     margin-top: 40px;
+    font-family: "Roboto", sans-serif;
 
 }
 
