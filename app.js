@@ -126,38 +126,46 @@ function pickBackground(weather) {
   if (weather.includes("cloud") == true) {
     weatherBody.classList.add("cloud");
     back.classList.add("cloud");
-    icon.src="icons/cloud-lightning-white.png"
+    icon.src="icons/clouds-white.png";
   }
   else if(weather.includes("sun") == true) {
     weatherBody.classList.add("sun");
     back.classList.add("sun");
+    icon.src="icons/icons8-sun-white.png";
   }
   else if (weather.includes("rain") == true) {
     weatherBody.classList.add("rain");
     back.classList.add("sun");
+    icon.src="icons/heavy-rain-white.png";
   }
   else if ((weather.includes("snow")) == true) {
     weatherBody.classList.add("snow");
     back.classList.add("snow");
+    icon.src="icons/icons8-snow-white.png";
   }
   else if (weather.includes("clear") == true) {
     weatherBody.classList.add("clear");
     back.classList.add("clear");
+    icon.src="icons/partly-cloudy-day-white.png";
   }
   else if (weather.includes("haze") == true) {
     weatherBody.classList.add("haze");
     back.classList.add("haze");
+    icon.src="icons/icons8-haze-white.png";
   }
   else if (weather.includes("thunderstorm") == true) {
     weatherBody.classList.add("rain");
     back.classList.add("rain");
+    icon.src="icons/cloud-lightning-white.png";
   }
   else if (weather.includes("drizzle") == true) {
     weatherBody.classList.add("rain");
     back.classList.add("rain");
+    icon.src="icons/light-rain-white.png";
   }
   else if (weather.includes("mist") == true) {
     weatherBody.classList.add("rain");
     back.classList.add("rain");
+    icon.src="icons/light-rain-white.png";
   }
 }
