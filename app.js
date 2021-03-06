@@ -26,6 +26,7 @@ const back = document.querySelector('#back');
 //keeps track of important data values
 const weather = {};
 const Kelvin = 273;
+let currentBackground ="";
 
 //store api key
 const apiKey = "242e7e5620f9b0e2bad6976201a676b3";
@@ -101,6 +102,9 @@ function show() {
 }
 
 function reset() {
+  console.log(currentBackground);
+  weatherBody.classList.toggle(currentBackground);
+    back.classList.toggle(currentBackground);
   show();
   weather = {};
 }
@@ -127,46 +131,58 @@ function pickBackground(weather) {
     weatherBody.classList.add("cloud");
     back.classList.add("cloud");
     icon.src="icons/clouds-white.png";
+    currentBackground="cloud";
   }
   else if(weather.includes("sun") == true) {
     weatherBody.classList.add("sun");
     back.classList.add("sun");
     icon.src="icons/icons8-sun-white.png";
+    currentBackground="sun";
   }
   else if (weather.includes("rain") == true) {
     weatherBody.classList.add("rain");
-    back.classList.add("sun");
+    back.classList.add("rain");
     icon.src="icons/heavy-rain-white.png";
+    currentBackground="rain";
   }
   else if ((weather.includes("snow")) == true) {
     weatherBody.classList.add("snow");
     back.classList.add("snow");
     icon.src="icons/icons8-snow-white.png";
+    currentBackground="snow";
   }
   else if (weather.includes("clear") == true) {
     weatherBody.classList.add("clear");
     back.classList.add("clear");
     icon.src="icons/partly-cloudy-day-white.png";
+    currentBackground="clear";
   }
   else if (weather.includes("haze") == true) {
     weatherBody.classList.add("haze");
     back.classList.add("haze");
     icon.src="icons/icons8-haze-white.png";
+    currentBackground="haze";
   }
   else if (weather.includes("thunderstorm") == true) {
     weatherBody.classList.add("rain");
     back.classList.add("rain");
     icon.src="icons/cloud-lightning-white.png";
+    currentBackground="rain";
   }
   else if (weather.includes("drizzle") == true) {
     weatherBody.classList.add("rain");
     back.classList.add("rain");
     icon.src="icons/light-rain-white.png";
+    currentBackground="rain";
   }
   else if (weather.includes("mist") == true) {
     weatherBody.classList.add("rain");
     back.classList.add("rain");
     icon.src="icons/light-rain-white.png";
+    currentBackground="rain";
+  }
+  else{
+    currentBackground="";
   }
 }
 

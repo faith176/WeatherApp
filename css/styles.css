@@ -85,6 +85,9 @@ Weather Details
     font-size:20px;
 }
 
+#location, #temp-value, #description{
+    font-size: 27px;
+}
 
 #img-icon{
     width:90px;
@@ -140,6 +143,7 @@ Details box
     margin-top: 40px;
     font-family: "Roboto", sans-serif;
     color:white;
+    font-size:16px;
 }
 
 /*
