@@ -1,7 +1,5 @@
 body{
-    background-color: #7dd3c2;
-    /* background-color:white;
-    background-color: #6D8CA0; */
+    background: linear-gradient( rgba(199,237,251,1) 0%, rgba(145,211,244,1) 36%, rgba(0,212,255,1) 100%);
     display:flex;
     justify-content:center;
     align-items:center;
@@ -19,6 +17,12 @@ Search Page
     font-size:40px;
     font-family: "Roboto", sans-serif;
     color:white;
+}
+
+.heading{
+
+}
+.header-icon{
 }
 
 .container{
@@ -47,7 +51,6 @@ Search Page
     border-radius: 10px;
     border: 0;
     background-color:white;
-    
 }
 
 .submit:hover{
@@ -62,17 +65,13 @@ Search Page
 Weather Details
 ===============
 */
-
 #weather{
     width:300px;
     height:400px;
 }
 
 .weather-container{
-    /* background-color:white; */
     background-color: #7dd3c2;
-
-    
     border-radius: 25px;
     display:flex;
     justify-content:center;
@@ -118,7 +117,6 @@ Types of backgrounds
     background: linear-gradient( rgba(210,157,157,1) 0%, rgba(252,98,69,1) 100%);
 }
 
-
 /*
 ===============
 Details box
@@ -157,10 +155,9 @@ High and Low Section
     margin-right: 45px;
 }
 
-
-
 #back{
     height: 50px;
     width:300px;
     margin-top: 20px;
+    color:white;
 }

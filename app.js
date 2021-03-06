@@ -33,10 +33,9 @@ const apiKey = "242e7e5620f9b0e2bad6976201a676b3";
 
 //when page loads, removed the weather section and only shows the search section
 window.addEventListener('load', (event) => {
-  document.querySelector("#header-icon").src = "hail-50.png";
+  document.querySelector("#header-icon").src = "icons/sun-50.png";
   show();
 });
-
 
 //adds an event listener for when the submit button is clicked
 submit.addEventListener('click', function () {
@@ -49,7 +48,6 @@ back.addEventListener('click', function () {
   reset();
   show();
 });
-
 
 //Can see the example data from here 
 //https://api.openweathermap.org/data/2.5/weather?q=calgary&appid=242e7e5620f9b0e2bad6976201a676b3
@@ -74,7 +72,6 @@ function findWeather(location) {
     weather.low = Math.floor(data.main.temp_min - Kelvin);
     weather.windSpeed = data.wind.speed;
     weather.humidity = data.main.humidity;
-
   })
   .then(function(){
       displayWeather();
@@ -89,7 +86,7 @@ function hide() {
   weatherDisplay.style.display = "block";
   console.log("showing weather display");
 
-  document.querySelector("body").style.backgroundColor = "#ffff"
+  document.querySelector("body").style.background = "#ffffff"
 }
 
 //shows the search bar and hides the weather section
@@ -99,12 +96,13 @@ function show() {
 
   search.style.display = "block";
   console.log("showing search bar");
+
+  document.querySelector("body").style.background = "linear-gradient( rgba(199,237,251,1) 0%, rgba(145,211,244,1) 36%, rgba(0,212,255,1) 100%)";
 }
 
 function reset() {
   show();
   weather = {};
-
 }
 
 function displayWeather() {
@@ -119,7 +117,6 @@ function displayWeather() {
   windSpeed.innerHTML = "Wind Speed: " + weather.windSpeed + "";
   humidity.innerHTML = "Humidity: " + weather.humidity + "%"
   pickBackground(weather.description);
-
 }
 
 
@@ -128,38 +125,38 @@ function displayWeather() {
 function pickBackground(weather) {
   if (weather.includes("cloud") == true) {
     weatherBody.classList.add("cloud");
-    console.log("added class cloud");
+    back.classList.add("cloud");
   }
   else if(weather.includes("sun") == true) {
     weatherBody.classList.add("sun");
-    console.log("added class sun");
+    back.classList.add("sun");
   }
   else if (weather.includes("rain") == true) {
     weatherBody.classList.add("rain");
-    console.log("added class rain");
+    back.classList.add("sun");
   }
   else if ((weather.includes("snow")) == true) {
     weatherBody.classList.add("snow");
-    console.log("added class snow");
+    back.classList.add("snow");
   }
   else if (weather.includes("clear") == true) {
     weatherBody.classList.add("clear");
-    console.log("added class clear");
+    back.classList.add("clear");
   }
   else if (weather.includes("haze") == true) {
     weatherBody.classList.add("haze");
-      console.log("added class haze");
+    back.classList.add("haze");
   }
   else if (weather.includes("thunderstorm") == true) {
     weatherBody.classList.add("rain");
-    console.log("added class rain");
+    back.classList.add("rain");
   }
   else if (weather.includes("drizzle") == true) {
     weatherBody.classList.add("rain");
-    console.log("added class rain");
+    back.classList.add("rain");
   }
   else if (weather.includes("mist") == true) {
     weatherBody.classList.add("rain");
-    console.log("added class rain");
+    back.classList.add("rain");
   }
 }
