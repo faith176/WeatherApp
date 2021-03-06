@@ -85,6 +85,7 @@ Weather Details
     font-size:20px;
 }
 
+
 #img-icon{
     width:90px;
     height:90px;
@@ -156,6 +157,11 @@ High and Low Section
 
 #high {
     margin-right: 45px;
+}
+
+#windSpeed-icon{
+    height:30px;
+    width:30px;
 }
 
 #back{

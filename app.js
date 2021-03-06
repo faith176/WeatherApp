@@ -114,7 +114,7 @@ function displayWeather() {
   des.innerHTML = weather.description;
   high.innerHTML = weather.high + "°C";
   low.innerHTML = weather.low + "°C";
-  windSpeed.innerHTML = "Wind Speed: " + weather.windSpeed + "";
+  windSpeed.innerHTML = "Wind Speed: " + windUnitConversion(weather.windSpeed).toFixed(2) + "km/hr";
   humidity.innerHTML = "Humidity: " + weather.humidity + "%"
   pickBackground(weather.description);
 }
@@ -168,4 +168,8 @@ function pickBackground(weather) {
     back.classList.add("rain");
     icon.src="icons/light-rain-white.png";
   }
+}
+
+function windUnitConversion(windSpeed) {
+  return (18/5)*(windSpeed);
 }
