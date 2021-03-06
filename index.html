@@ -22,7 +22,7 @@
             <div class="container">
               <div class="header">
               <h1 class="heading">Weather App</h1>
-              <img id="header-icon" scr=""></img>
+              <img id="header-icon"></img>
             </div>
                 <div id="form-div">
                 <input id="city" type="text" placeholder="Search for any city!" autofocus>
@@ -45,7 +45,22 @@
                 <span id="description"></span>
               </div>
               <div id="details">
-                <span></span>
+                <div id="high-low">
+                  <div id="high">
+                    <span id="high-temp"></span>
+                    <span id="high-words">High</span>
+                  </div>
+                  <div id="low">
+                    <span id="low-temp"></span>
+                    <span id="low-words">Low</span>
+                  </div>
+                </div>
+                <div id="humidity">
+                  <span id="humidity-value"></span>
+                </div>
+                <div id="windSpeed">
+                  <span id="windSpeed-value"></span>
+                </div>
               </div>
             </div>
             <button id="back" class="submit">Back to Search</button>

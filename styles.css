@@ -1,5 +1,6 @@
 body{
     background-color: #7dd3c2;
+    /* background-color: #6D8CA0; */
     display:flex;
     justify-content:center;
     align-items:center;
@@ -86,3 +87,38 @@ Weather Details
 
 
 
+/*
+===============
+Details box
+===============
+*/
+#details {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: auto;
+    flex-direction: column;
+    margin-top: 40px;
+
+}
+
+/*
+===============
+High and Low Section 
+===============
+*/
+#high-low {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#high, #low {
+    
+}
+
+#high {
+    margin-right: 45px;
+}

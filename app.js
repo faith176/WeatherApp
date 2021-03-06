@@ -14,6 +14,12 @@ const des = document.querySelector("#description");
 const loc = document.querySelector("#location");
 const details = document.querySelector("#details");
 
+const high = document.querySelector("#high-temp");
+const low = document.querySelector("#low-temp");
+const humidity = document.querySelector("#humidity-value");
+const windSpeed = document.querySelector("#windSpeed-value");
+
+
 //get back button from weather section
 const back = document.querySelector('#back');
 
@@ -26,7 +32,7 @@ const apiKey = "242e7e5620f9b0e2bad6976201a676b3";
 
 //when page loads, removed the weather section and only shows the search section
 window.addEventListener('load', (event) => {
-  document.querySelector("#header-icon").src = "rain-cloud-50.png";
+  document.querySelector("#header-icon").src = "hail-50.png";
   show();
 });
 
@@ -58,11 +64,16 @@ function findWeather(location) {
   })
   .then(function(data){
     //retrives all the relevant data
+    weather.city = data.name;
+    weather.iconId = data.weather[0].icon;
+    weather.country = data.sys.country;
     weather.temperature = Math.floor(data.main.temp - Kelvin);
     weather.description = data.weather[0].description;
-    weather.iconId = data.weather[0].icon;
-    weather.city = data.name;
-    weather.country = data.sys.country;
+    weather.high = Math.floor(data.main.temp_max - Kelvin);
+    weather.low = Math.floor(data.main.temp_min - Kelvin);
+    weather.windSpeed = data.wind.speed;
+    weather.humidity = data.main.humidity;
+
   })
   .then(function(){
       displayWeather();
@@ -96,13 +107,15 @@ function reset() {
 function displayWeather() {
   hide();
   loc.innerHTML = weather.city +", " + weather.country;
-
-
-  
-  //gets the icons from the website
+  //gets the icons from the website for now
   icon.src = `http://openweathermap.org/img/wn/${weather.iconId}.png`;
   tempVal.innerHTML = weather.temperature+ "°C";
   des.innerHTML = weather.description;
+  high.innerHTML = weather.high + "°C";
+  low.innerHTML = weather.low + "°C";
+  windSpeed.innerHTML = "Wind Speed: " + weather.windSpeed + "";
+  humidity.innerHTML = "Humidity: " + weather.humidity + "%"
+
 }
 
 function pickIcon() {
