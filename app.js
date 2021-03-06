@@ -53,12 +53,14 @@ back.addEventListener('click', function () {
 function findWeather(location) {
   //constructs api url
   const api = ("https://api.openweathermap.org/data/2.5/weather?q="+location+"&appid="+apiKey);
+
   fetch(api)
   .then(function(response){
       let data = response.json();
       return data;
   })
   .then(function(data){
+    try{
     //retrives all the relevant data
     weather.city = data.name;
     weather.iconId = data.weather[0].icon;
@@ -69,10 +71,15 @@ function findWeather(location) {
     weather.low = Math.floor(data.main.temp_min - Kelvin);
     weather.windSpeed = data.wind.speed;
     weather.humidity = data.main.humidity;
+    } catch(err) {
+      console.log(err);
+      alert("Location Not Found! Try putting a valid city?");
+      exit;
+    }
   })
   .then(function(){
       displayWeather();
-  });
+  })
 }
 
 //hides the search bar and shows the weather section
@@ -82,8 +89,6 @@ function hide() {
 
   weatherDisplay.style.display = "block";
   console.log("showing weather display");
-
-  document.querySelector("body").style.background = "#add8e6"
 }
 
 //shows the search bar and hides the weather section
@@ -93,8 +98,6 @@ function show() {
 
   search.style.display = "block";
   console.log("showing search bar");
-
-  document.querySelector("body").style.background = "linear-gradient( rgba(199,237,251,1) 0%, rgba(145,211,244,1) 36%, rgba(0,212,255,1) 100%)";
 }
 
 function reset() {

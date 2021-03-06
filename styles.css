@@ -89,13 +89,13 @@ Types of backgrounds
 ===============
 */
 .cloud {
-    background: rgb(116,164,182);
-    background: linear-gradient(0deg, rgba(116,164,182,1) 0%, rgba(72,102,147,1) 100%); 
+    background: rgb(189,157,210);
+    background: linear-gradient( rgba(189,157,210,1) 0%, rgba(69,136,252,1) 100%);
 }
 
 .sun {
-    background: rgb(199,237,251);
-    background: linear-gradient( rgba(199,237,251,1) 0%, rgba(145,211,244,1) 36%, rgba(0,212,255,1) 100%);
+    background: rgb(98,255,189);
+    background: linear-gradient(0deg, rgba(98,255,189,1) 12%, rgba(98,205,238,1) 100%);
 }
 
 .rain {
@@ -104,13 +104,13 @@ Types of backgrounds
 }
 
 .snow {
-    background: rgb(189,157,210);
-    background: linear-gradient( rgba(189,157,210,1) 0%, rgba(69,136,252,1) 100%);
+    background: rgb(116,164,182);
+    background: linear-gradient( rgba(116,164,182,1) 0%, rgba(72,102,147,1) 100%); 
 }
 
 .clear {
     background: rgb(157,210,174);
-    background: linear-gradient(90deg, rgba(157,210,174,1) 0%, rgba(86,231,220,1) 100%);
+    background: linear-gradient( rgba(157,210,174,1) 0%, rgba(86,231,220,1) 100%);
 }
 
 .haze {
@@ -132,7 +132,6 @@ Details box
     margin-top: 40px;
     font-family: "Roboto", sans-serif;
     color:white;
-
 }
 
 /*
@@ -146,10 +145,6 @@ High and Low Section
     align-items:center;
     height: auto;
     margin-bottom: 20px;
-}
-
-#high, #low {
-    
 }
 
 #high {
