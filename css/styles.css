@@ -44,7 +44,7 @@ Search Page
 
 .submit{
     width:15%;
-    height:120%;
+    height:125%;
     font-family: "Roboto", sans-serif;
     cursor: pointer;
     transition: all 0.5s;
@@ -82,7 +82,12 @@ Weather Details
     height:400px;
     font-family: "Roboto", sans-serif;
     color:white;
-    font-size:22px;
+    font-size:20px;
+}
+
+#img-icon{
+    width:90px;
+    height:90px;
 }
 
 /*

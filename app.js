@@ -109,7 +109,7 @@ function displayWeather() {
   hide();
   loc.innerHTML = weather.city +", " + weather.country;
   //gets the icons from the website for now
-  icon.src = `http://openweathermap.org/img/wn/${weather.iconId}.png`;
+  // icon.src = `http://openweathermap.org/img/wn/${weather.iconId}.png`;
   tempVal.innerHTML = weather.temperature+ "°C";
   des.innerHTML = weather.description;
   high.innerHTML = weather.high + "°C";
@@ -126,6 +126,7 @@ function pickBackground(weather) {
   if (weather.includes("cloud") == true) {
     weatherBody.classList.add("cloud");
     back.classList.add("cloud");
+    icon.src="icons/cloud-lightning-white.png"
   }
   else if(weather.includes("sun") == true) {
     weatherBody.classList.add("sun");
