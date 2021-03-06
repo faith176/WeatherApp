@@ -20,7 +20,6 @@ const low = document.querySelector("#low-temp");
 const humidity = document.querySelector("#humidity-value");
 const windSpeed = document.querySelector("#windSpeed-value");
 
-
 //get back button from weather section
 const back = document.querySelector('#back');
 
@@ -33,7 +32,6 @@ const apiKey = "242e7e5620f9b0e2bad6976201a676b3";
 
 //when page loads, removed the weather section and only shows the search section
 window.addEventListener('load', (event) => {
-  document.querySelector("#header-icon").src = "icons/sun-50.png";
   show();
 });
 
@@ -46,7 +44,6 @@ submit.addEventListener('click', function () {
 //adds an event listener for when the back button is clicked and resets values
 back.addEventListener('click', function () {
   reset();
-  show();
 });
 
 //Can see the example data from here 
@@ -86,7 +83,7 @@ function hide() {
   weatherDisplay.style.display = "block";
   console.log("showing weather display");
 
-  document.querySelector("body").style.background = "#ffffff"
+  document.querySelector("body").style.background = "#add8e6"
 }
 
 //shows the search bar and hides the weather section
