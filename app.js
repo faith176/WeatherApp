@@ -8,6 +8,7 @@ const search = document.querySelector("#top");
 const weatherDisplay = document.querySelector("#weather");
 
 //get weather display elements
+const weatherBody = document.querySelector(".weather-container");
 const icon = document.querySelector("#img-icon");
 const tempVal = document.querySelector("#temp-value");
 const des = document.querySelector("#description");
@@ -87,6 +88,8 @@ function hide() {
 
   weatherDisplay.style.display = "block";
   console.log("showing weather display");
+
+  document.querySelector("body").style.backgroundColor = "#ffff"
 }
 
 //shows the search bar and hides the weather section
@@ -115,23 +118,48 @@ function displayWeather() {
   low.innerHTML = weather.low + "°C";
   windSpeed.innerHTML = "Wind Speed: " + weather.windSpeed + "";
   humidity.innerHTML = "Humidity: " + weather.humidity + "%"
+  pickBackground(weather.description);
 
 }
 
-function pickIcon() {
 
-}
-
-function pickBackground() {
-
-}
-
-function getLocalTime(data) {
-  let date = new Date();
-  let time = date.getTime();
-  let localOffset = date.getTimezoneOffset() * 60000;
-  let utc = time + localOffset;
-  let localTime = utc + 1000 * data;
-  let localTimeDate = new Date(localTime);
-  return localTimeDate.toLocaleString();
+//function to pick the background of the weather section
+//depending on current weather
+function pickBackground(weather) {
+  if (weather.includes("cloud") == true) {
+    weatherBody.classList.add("cloud");
+    console.log("added class cloud");
+  }
+  else if(weather.includes("sun") == true) {
+    weatherBody.classList.add("sun");
+    console.log("added class sun");
+  }
+  else if (weather.includes("rain") == true) {
+    weatherBody.classList.add("rain");
+    console.log("added class rain");
+  }
+  else if ((weather.includes("snow")) == true) {
+    weatherBody.classList.add("snow");
+    console.log("added class snow");
+  }
+  else if (weather.includes("clear") == true) {
+    weatherBody.classList.add("clear");
+    console.log("added class clear");
+  }
+  else if (weather.includes("haze") == true) {
+    weatherBody.classList.add("haze");
+      console.log("added class haze");
+  }
+  else if (weather.includes("thunderstorm") == true) {
+    weatherBody.classList.add("rain");
+    console.log("added class rain");
+  }
+  else if (weather.includes("drizzle") == true) {
+    weatherBody.classList.add("rain");
+    console.log("added class rain");
+  }
+  else if (weather.includes("mist") == true) {
+    weatherBody.classList.add("rain");
+    console.log("added class rain");
+  }
 }
