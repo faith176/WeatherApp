@@ -67,7 +67,6 @@ Weather Details
 */
 #weather{
     display:flex;
-
     align-items:center;
     height:400px;
     width:600px;
@@ -81,7 +80,6 @@ Weather Details
     align-items:center;
     flex-direction: column;
     height:400px;
-
     font-family: "Roboto", sans-serif;
     color:white;
     font-size:22px;
@@ -157,7 +155,7 @@ High and Low Section
 
 #back{
     height: 50px;
-    width:300px;
+    width:600px;
     margin-top: 20px;
     color:white;
 }
